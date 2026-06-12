@@ -24,7 +24,7 @@ class App(tk.Tk):
         self.frame_loading.pack(padx=40, pady=40)
 
         tk.Label(self.frame_loading,
-                 text="🗺️  Dijkstra — Maricá RJ",
+                 text="🗺️  Dijkstra - Pontos turísticos de Maricá",
                  font=("Helvetica", 16, "bold"),
                  bg="#f8fafc", fg="#0f172a").pack(pady=(0, 6))
 
@@ -43,7 +43,6 @@ class App(tk.Tk):
         self.lbl_status.pack()
 
     def _iniciar_download(self):
-        """Roda o download em thread separada para não travar a UI."""
         def worker():
             try:
                 self.lbl_status.config(text="Baixando grafo de ruas de Maricá...")
@@ -70,7 +69,7 @@ class App(tk.Tk):
     def _build_ui(self):
         nomes = list(PONTOS_QUERY.keys())
 
-        tk.Label(self, text="🗺️  Dijkstra — Maricá RJ",
+        tk.Label(self, text="🗺️ Dijkstra - Maricá",
                  font=("Helvetica", 16, "bold"),
                  bg="#f8fafc", fg="#0f172a").pack(pady=(20, 2))
         tk.Label(self,
@@ -182,7 +181,7 @@ class App(tk.Tk):
 
         passos = " → ".join(f"{EMOJIS[n]} {n}" for n in caminho)
         self.lbl_caminho.config(text=f"Caminho: {passos}")
-        self.lbl_custo.config(text=f"Distância total: {custo:.2f} km (pela rua)")
+        self.lbl_custo.config(text=f"Distância total: {custo:.2f} km")
         self.frame_resultado.pack(padx=24, pady=4, fill="x")
 
         for row in self.tabela.get_children():
