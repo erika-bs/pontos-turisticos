@@ -34,8 +34,7 @@ def carregar_dados():
         "Maricá, Rio de Janeiro, Brazil",
         network_type="drive"
     )
-    G_osm = ox.add_edge_speeds(G_osm)
-    G_osm = ox.add_edge_travel_times(G_osm)
+    
     print(f"   Grafo carregado: {len(G_osm.nodes)} nós, {len(G_osm.edges)} arestas")
 
     print("📍 Geocodificando pontos turísticos...")
