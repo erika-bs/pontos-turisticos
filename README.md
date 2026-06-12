@@ -1,4 +1,4 @@
-# Dijkstra — Maricá RJ (Dados Reais)
+# Dijkstra — Maricá
 
 Aplicação desktop que calcula o **menor caminho real pelas ruas** entre pontos
 turísticos de Maricá usando o algoritmo de Dijkstra.
