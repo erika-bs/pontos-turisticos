@@ -68,7 +68,7 @@ def gerar_mapa(resultado, coords):
         <div style="font-family:sans-serif;min-width:180px;padding:4px">
             <b style="font-size:14px">{EMOJIS[nome]} {nome}</b><br>
             <span style="color:#64748b;font-size:12px">
-                {todas[nome]:.2f} km de {origem} (pela rua)
+                {todas[nome]:.2f} km de {origem}
             </span>{destaque}
         </div>"""
 
@@ -90,7 +90,7 @@ def gerar_mapa(resultado, coords):
         <span style="color:{COR_ORIGEM}">●</span> Origem: {EMOJIS[origem]} {origem}<br>
         <span style="color:{COR_DESTINO}">●</span> Destino: {EMOJIS[destino]} {destino}<br>
         <span style="color:{COR_ROTA}">●</span> No caminho mínimo<br><br>
-        <b style="color:{COR_ROTA}">Total: {custo_km:.2f} km pela rua</b><br>
+        <b style="color:{COR_ROTA}">Total: {custo_km:.2f} km</b><br>
         <span style="color:#64748b;font-size:11px">{passos}</span>
     </div>"""
     m.get_root().html.add_child(folium.Element(legenda))
