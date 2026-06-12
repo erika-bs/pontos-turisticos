@@ -9,7 +9,7 @@ não distâncias estimadas.
 ## Como rodar
 
 ```bash
-pip install osmnx folium networkx
+pip install -r requirements.txt
 python main.py
 ```
 
